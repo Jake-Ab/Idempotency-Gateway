@@ -1,5 +1,5 @@
 
-import type { PaymentResponse } from "../types/payments.js";
+import type { PaymentResponse } from "../types/payments.ts";
 
 export async function processPayment (amount: number, currency: string): Promise<PaymentResponse> {
 
