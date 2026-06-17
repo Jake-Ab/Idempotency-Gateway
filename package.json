@@ -1,0 +1,35 @@
+{
+  "name": "idempotency-gateway",
+  "version": "1.0.0",
+  
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jake-Ab/Idempotency-Gateway.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Jake-Ab/Idempotency-Gateway/issues"
+  },
+  "homepage": "https://github.com/Jake-Ab/Idempotency-Gateway#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.3",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "5.8"
+  }
+}
