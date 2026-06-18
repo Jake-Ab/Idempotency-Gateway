@@ -1,10 +1,19 @@
 import express from "express";
+import paymentRoutes from "./routes/payment";
 
 const app = express();
 
 app.use(express.json());
 const PORT = 3000;
 
-app.listen(PORT, () => {
-    console.log(`app is running on ${PORT}`);
+app.use(paymentRoutes);
+
+app.get('/', (req, res) => {
+    res.send("api running")
 })
+
+app.listen(PORT, () => {
+    return console.log(`app is running on port ${PORT}`);
+
+})
+
