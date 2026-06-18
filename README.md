@@ -82,7 +82,7 @@ sequenceDiagram
 ```bash
 git clone "https://github.com/Jake-Ab/Idempotency-Gateway.git"
 
-cd idempotency-gateway
+cd Idempotency-Gateway
 ```
 
 
