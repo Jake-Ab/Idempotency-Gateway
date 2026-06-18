@@ -51,7 +51,9 @@ router.post("/process-payment", async (req, res) => {
 
     //process new request (happy path)
     const {amount, currency } = req.body;
-    //create a payment promise
+
+    try {
+        //create a payment promise
     const paymentPromise = processPayment(amount, currency);
 
     //store the promise in the store immediately to prevent race condition
@@ -75,6 +77,16 @@ router.post("/process-payment", async (req, res) => {
 
     //return the processed response
     return res.status(200).json(response);
+    } catch (error) {
+        idempotencyStore.delete(key);
+
+        console.error("Payment processing failed:", error);
+        return res.status(500).json({
+            error: "Payment processing failed!"
+        });
+
+    }
+    
 
 })
 
