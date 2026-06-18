@@ -8,11 +8,12 @@ const PORT = 3000;
 
 app.use(paymentRoutes);
 
+app.get('/', (req, res) => {
+    res.send("api running")
+})
+
 app.listen(PORT, () => {
     return console.log(`app is running on port ${PORT}`);
 
 })
 
-app.get('/', (req, res) => {
-    res.send("api running")
-})
